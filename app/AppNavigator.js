@@ -16,9 +16,10 @@ import Income from "./screens/Income";
 import Expenses from "./screens/Expenses";
 import ProfitAndLoss from "./screens/ProfitAndLoss";
 import CashInFlow from "./screens/CashInFlow";
+import LoginAuth from "./screens/LoginAuth";
 
 const LoginStack = createStackNavigator({
-  Login: { screen: Login},
+  LoginAuth: { screen: LoginAuth},
   Signup: Signup,
   VerifyMobile: VerifyMobile
 }, {

@@ -7,24 +7,6 @@ const commonStyles = StyleSheet.create({
         marginTop: 10,
         marginHorizontal: wp('5%')
     },
-    formElement: {
-        marginBottom: wp('3.6%')
-    },
-    imagePicker: {
-        width: wp('90%'),
-        backgroundColor: '#d3d3d3',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: hp('25%'),
-        width: wp('50%'),
-        borderRadius: 10,
-        alignSelf: 'center',
-        marginBottom: wp('3.6%')
-    },
-    roundedIcon: {
-        borderRadius: 100 / 2,
-        borderWidth: 2, 
-    },
     labelMain: {
         width: wp('40%'),
         fontWeight: 'bold',
