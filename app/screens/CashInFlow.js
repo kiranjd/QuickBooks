@@ -7,8 +7,42 @@ import { TouchableHighlight, TouchableOpacity } from 'react-native-gesture-handl
 import HeaderExport from '../components/Header';
 //styles
 import commonStyles from '../common/CommonStyles';
+//constants
+import { baseUrl } from '../common/Constants';
 
 export default class CashInFlow extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            code: this.props.navigation.getParam('Id', 'CtEzTYe'),
+            realmId: '',
+            accessToken: ''
+        }
+        alert(this.state.code);
+    }
+
+    componentDidMount() {
+        alert(this.state.code);
+        let { code, realmId, accessToken } = this.state;
+
+        let url = baseUrl + '/getToken.php?id=' + code;
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(responseJson => this.setState({
+            realmId: responseJson.RealmId,
+            accessToken: responseJson.AccessToken 
+        }))
+        .catch(error => console.log(error));
+
+        
+    }
+
     render() {
         return (
             <Container>
