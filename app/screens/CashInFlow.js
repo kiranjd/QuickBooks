@@ -39,7 +39,9 @@ export default class CashInFlow extends Component {
             accessToken: responseJson.AccessToken 
         }))
         .catch(error => console.log(error));
+    }
 
+    callAPI = () => {
         
     }
 

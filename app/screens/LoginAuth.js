@@ -10,7 +10,7 @@ import { baseUrl } from '../common/Constants';
 export default class LoginAuth extends Component {
 constructor(props) {
   super(props);
-  this.props.navigation.navigate('Home');
+  //this.props.navigation.navigate('Home');
   this.webView = null;
 }
 

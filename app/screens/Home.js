@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, FlatList, Image, Alert, ScrollView } from 'react-native';
+import { StyleSheet, View, FlatList, Image, Alert, ScrollView, ActivityIndicator } from 'react-native';
 //UI
 import { Container, Button, Text, Form, Input, Label, Item, Title, Body, Left, Right, Icon, Card, CardItem, Thumbnail, H1, H2 } from 'native-base';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
@@ -184,7 +184,7 @@ export default class Home extends Component {
                         <CardItem button onPress={() => this.props.navigation.navigate('StatutoryPayables')}>
                             <Body style={commonStyles.cardItemContainer}>
                                 <Text style={commonStyles.label}>Statutory Payables</Text>
-                                <Text style={commonStyles.value}>98,234 Rs.</Text>
+                                <Text style={commonStyles.value}>0 Rs.</Text>
                             </Body>
                         </CardItem>
                     </Card>
